@@ -50,7 +50,7 @@ const PhotoModal: React.FC<PhotoModalProps> = ({
   };
 
   useEffect(() => {
-    if (isOpen && images.length > 0 && thumbnailScrollRef.current) {
+    if (thumbnailScrollRef.current) {
       const activeThumbnail = thumbnailScrollRef.current.children[currentImageIndex] as HTMLElement;
       if (activeThumbnail) {
         const containerWidth = thumbnailScrollRef.current.clientWidth;
