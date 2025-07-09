@@ -25,12 +25,17 @@ const PhotoModal: React.FC<PhotoModalProps> = ({
     setCurrentImageIndex(initialImageIndex);
   }, [initialImageIndex, isOpen]);
 
-  useEffect(() => {
-    document.body.style.overflow = isOpen ? 'hidden' : 'unset';
+   useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    // Cleanup function: Pastikan overflow kembali normal saat komponen di-unmount
     return () => {
       document.body.style.overflow = 'unset';
     };
-  }, [isOpen]);
+  }, [isOpen]); 
 
   if (!isOpen) return null;
 
@@ -45,7 +50,7 @@ const PhotoModal: React.FC<PhotoModalProps> = ({
   };
 
   useEffect(() => {
-    if (thumbnailScrollRef.current) {
+    if (isOpen && images.length > 0 && thumbnailScrollRef.current) {
       const activeThumbnail = thumbnailScrollRef.current.children[currentImageIndex] as HTMLElement;
       if (activeThumbnail) {
         const containerWidth = thumbnailScrollRef.current.clientWidth;
