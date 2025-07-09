@@ -50,7 +50,7 @@ const PhotoModal: React.FC<PhotoModalProps> = ({
   };
 
   useEffect(() => {
-    if (thumbnailScrollRef.current) {
+    if (isOpen && images.length > 0 && thumbnailScrollRef.current) {
       const activeThumbnail = thumbnailScrollRef.current.children[currentImageIndex] as HTMLElement;
       if (activeThumbnail) {
         const containerWidth = thumbnailScrollRef.current.clientWidth;
@@ -60,7 +60,7 @@ const PhotoModal: React.FC<PhotoModalProps> = ({
         thumbnailScrollRef.current.scrollTo({ left: scrollLeft, behavior: 'smooth' });
       }
     }
-  }, [currentImageIndex, images]);
+  }, [currentImageIndex, images, isOpen]);
 
   return (
     <div className="fixed flex items-center justify-center inset-0 z-50">
