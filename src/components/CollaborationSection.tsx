@@ -1,6 +1,5 @@
 // src/Component/CollaborationSection.tsx
 import Image from 'next/image';
-import Link from 'next/link';
 
 const CollaborationSection: React.FC = () => {
   return (

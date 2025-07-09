@@ -1,7 +1,6 @@
 // src/Component/InnovationSection.tsx
 "use client"; // Diperlukan untuk useState, useRef, dan useEffect
 import Image from 'next/image';
-import Link from 'next/link';
 import { useRef, useState, useEffect } from 'react';
 
 interface InnovationCardProps {

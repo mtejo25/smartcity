@@ -1,7 +1,6 @@
 // src/Component/GallerySection.tsx
 "use client"; // Diperlukan untuk useState, useRef, dan useEffect
 import Image from 'next/image';
-import Link from 'next/link'; // Jika kartu bisa diklik
 import { useRef, useState, useEffect } from 'react';
 
 interface GalleryCardProps {

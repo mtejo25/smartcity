@@ -1,10 +1,10 @@
-import Image from "next/image";
+
 import HeroSection from '@/components/HeroSection';
 import LatestNewsSection from '@/components/LatestNewsSection';
-import JakiSection from '@/components/JakiSection';
+
 import PrinciplesSection from '@/components/PrinciplesSection';
 import CollaborationSection from '@/components/CollaborationSection';
-import CtaSection from '@/components/CtaSection';
+
 import InnovationSection from "@/components/InnovationSection";
 import LayananJSCSection from "@/components/LayananJSCSection";
 import KunjunganRuanganSection from "@/components/KunjunganRuanganSection";
