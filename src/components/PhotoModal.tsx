@@ -37,18 +37,6 @@ const PhotoModal: React.FC<PhotoModalProps> = ({
     };
   }, [isOpen]); 
 
-  if (!isOpen) return null;
-
-  const currentImage = images[currentImageIndex];
-
-  const goToPrev = () => {
-    setCurrentImageIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1));
-  };
-
-  const goToNext = () => {
-    setCurrentImageIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1));
-  };
-
   useEffect(() => {
     if (isOpen && images.length > 0 && thumbnailScrollRef.current) {
       const activeThumbnail = thumbnailScrollRef.current.children[currentImageIndex] as HTMLElement;
@@ -61,6 +49,23 @@ const PhotoModal: React.FC<PhotoModalProps> = ({
       }
     }
   }, [currentImageIndex, images, isOpen]);
+
+  
+    if (!isOpen) return null;
+
+  const currentImage = images[currentImageIndex];
+
+  const goToPrev = () => {
+    setCurrentImageIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1));
+  };
+
+  const goToNext = () => {
+    setCurrentImageIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1));
+  };
+
+  
+
+  
 
   return (
     <div className="fixed flex items-center justify-center inset-0 z-50">
