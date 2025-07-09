@@ -6,10 +6,10 @@ import { useRef, useState, useEffect } from 'react';
 interface InnovationCardProps {
   imageSrc: string;
   title: string;
-  link?: string; // Link opsional
+
 }
 
-const InnovationCard: React.FC<InnovationCardProps> = ({ imageSrc, title, link }) => {
+const InnovationCard: React.FC<InnovationCardProps> = ({ imageSrc, title }) => {
   return (
     <div className="flex-none w-60 bg-white rounded-xl shadow-md flex flex-col items-center justify-between text-center mx-3 transform transition-transform duration-300 hover:scale-[1.02] cursor-pointer border border-blue-100">
       <div className="relative bg-blue-700 rounded-t-xl w-full h-64 flex items-center justify-center">
@@ -37,32 +37,32 @@ const InnovationSection: React.FC = () => {
     {
       imageSrc: "/jaki-app.png", // Ganti dengan path gambar Anda
       title: "JAKI Apps",
-      link: "/inovasi/jaki-apps",
+     
     },
     {
       imageSrc: "/jaki-app.png", // Ganti dengan path gambar Anda
       title: "CRM",
-      link: "/inovasi/crm",
+     
     },
     {
       imageSrc: "/jaki-app.png", // Ganti dengan path gambar Anda
       title: "Future City Hub",
-      link: "/inovasi/future-city-hub",
+      
     },
     {
       imageSrc: "/jaki-app.png", // Ganti dengan path gambar Anda
       title: "Jurnal",
-      link: "/inovasi/jurnal",
+      
     },
     {
       imageSrc: "/jaki-app.png", // Ganti dengan path gambar Anda
       title: "Pantau Banjir",
-      link: "/inovasi/pantau-banjir",
+      
     },
     {
       imageSrc: "/jaki-app.png", // Tambahkan lebih banyak jika ada
       title: "Aplikasi Lain",
-      link: "/inovasi/lain",
+     
     },
     // Tambahkan lebih banyak data inovasi di sini
   ] as const; // Penting untuk inferensi tipe

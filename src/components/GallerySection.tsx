@@ -7,10 +7,9 @@ interface GalleryCardProps {
   imageSrc: string;
   title: string;
   date: string;
-  link?: string; // Link opsional jika kartu galeri bisa diklik
 }
 
-const GalleryCard: React.FC<GalleryCardProps> = ({ imageSrc, title, date, link }) => {
+const GalleryCard: React.FC<GalleryCardProps> = ({ imageSrc, title, date }) => {
   return (
     <div className="flex-none w-80 md:w-[360px] lg:w-[400px] bg-white rounded-lg shadow-md overflow-hidden text-center mx-4">
       <div className="relative w-full pt-[56.25%]"> {/* 16:9 Aspect Ratio untuk gambar */}
@@ -45,26 +44,22 @@ const GallerySection: React.FC = () => {
     {
       imageSrc: "/gallery-jakarta-traffic.jpg", // Ganti dengan path gambar Anda
       title: "Highlight Jakarta Dalam Sepekan",
-      date: "25 - 31 Desember 2023",
-      link: "/galeri/highlight-1",
+      date: "25 - 31 Desember 2023"
     },
     {
       imageSrc: "/gallery-jakarta-traffic.jpg",
       title: "Highlight Jakarta Dalam Sepekan",
-      date: "25 - 31 Desember 2023",
-      link: "/galeri/highlight-2",
+      date: "25 - 31 Desember 2023"
     },
     {
       imageSrc: "/gallery-jakarta-traffic.jpg",
       title: "Highlight Jakarta Dalam Sepekan",
-      date: "25 - 31 Desember 2023",
-      link: "/galeri/highlight-3",
+      date: "25 - 31 Desember 2023"
     },
     {
       imageSrc: "/gallery-jakarta-traffic.jpg",
       title: "Highlight Jakarta Dalam Sepekan",
-      date: "25 - 31 Desember 2023",
-      link: "/galeri/highlight-4",
+      date: "25 - 31 Desember 2023"
     },
     // Tambahkan lebih banyak item galeri di sini
   ] as const;

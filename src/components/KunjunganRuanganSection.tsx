@@ -13,15 +13,8 @@ const KunjunganRuanganSection: React.FC = () => {
 
   // Cara yang lebih eksplisit untuk TypeScript:
   // Langsung tentukan kelas berdasarkan nilai imagePosition
-  let layoutClasses = 'md:flex-row';
-  if (imagePosition === 'right') { // Jika imagePosition adalah 'right', balikkan urutan
-    layoutClasses = 'md:flex-row-reverse';
-  }
-  // Atau lebih ringkas lagi:
-  // const layoutClasses = imagePosition === 'right' ? 'md:flex-row-reverse' : 'md:flex-row';
-  // Namun, untuk kasus ini, karena imagePosition sudah konstan, bisa juga:
-  // const layoutClasses = 'md:flex-row-reverse'; // Karena imagePosition di sini selalu "right"
-
+  
+ 
   // Menggunakan pendekatan yang lebih langsung sesuai nilai const imagePosition
   const finalLayoutClass = imagePosition === 'right' ? 'md:flex-row-reverse' : 'md:flex-row';
 

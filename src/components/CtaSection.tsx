@@ -13,8 +13,6 @@ interface VideoItemProps {
 
 const VideoItem: React.FC<VideoItemProps> = ({ youtubeId, title, thumbnailSrc, label }) => {
   // Untuk menyederhanakan, kita akan langsung menggunakan iframe, bukan video player custom
-  const youtubeEmbedUrl = `http://googleusercontent.com/youtube.com/8${youtubeId}?autoplay=0&controls=1&modestbranding=1&rel=0`;
-
   return (
     <div className="flex-none w-[calc(100%-48px)] md:w-1/2 lg:w-1/3 xl:w-1/4 mr-6 relative rounded-lg overflow-hidden shadow-lg bg-gray-900">
       <div className="relative w-full pt-[56.25%]"> {/* Rasio aspek 16:9 */}
